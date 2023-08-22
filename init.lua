@@ -1,6 +1,16 @@
 local markdown_guide = [[
-# CTF Guide Title Goes Here
+# Minetest Capture the Flag Guide
+### Basics
+To capture the enemy's flag, run to their base and click their flag to take it. 
+Then, make it back to your base alive before the enemy takes your team's flag. Click your own flag to capture.
+You can fight the enemy with weapons.
 
+### Modes
+CTF cycles through three modes: Classes, Nade Fight, and Classic.
+
+1. In Classes, right click your team's flag to change classes. You can switch between knight, scout and support
+
+### Others
 1. Start your messages with /t to talk to your team.
 2. Eat apples to quickly restore your health.
 3. Sprint by pressing the fast key (E).
