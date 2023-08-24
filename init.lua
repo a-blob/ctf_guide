@@ -46,24 +46,45 @@ sfinv.register_page("ctf_guide:guide", {
 
 minetest.register_on_newplayer(function(player)
     local player_name = player:get_player_name()
+    local background_hud = player:hud_add({
+        hud_elem_type = "image",
+        position = {x = 1, y = 0.15},
+        offset = {x = -180, y = 20},
+        text = "background.png",
+        scale = {x = 1.5, y = 1.5},
+        alignment = 0
+    })
     local welcome_hud = player:hud_add({
         hud_elem_type = "text",
-        position = {x = 1, y = 0.5},
+        position = {x = 1, y = 0.15},
         offset = {x = -180, y = 0},
-        text = "Welcome to Capture the Flag!\nRun /ctf_guide in chat for instructions\non how to play.",
+        text = "Welcome to Capture the Flag!",
+        alignment = 0,
+        scale = {x = 100, y = 30},
+        number = 0xFFA500,
+    })
+    local text_hud = player:hud_add({
+        hud_elem_type = "text",
+        position = {x = 1, y = 0.15},
+        offset = {x = -180, y = 40},
+        text = "Run /ctf_guide in chat for instructions\non how to play.",
         alignment = 0,
         scale = {x = 100, y = 30},
         number = 0xFFFFFF,
     })
 
-    minetest.after(30, function()
+    minetest.after(60, function()
         player:hud_remove(welcome_hud)
+        player:hud_remove(text_hud)
+        player:hud_remove(background_hud)
     end)
 
     minetest.register_chatcommand("ctf_guide", {
         func = function(name, param)
             if name == player_name then
                 player:hud_remove(welcome_hud)
+                player:hud_remove(text_hud)
+                player:hud_remove(background_hud)
             end
             ctf_guide(name, markdown_guide)
         end
