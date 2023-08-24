@@ -2,7 +2,7 @@ local markdown_guide = [[
 # Capture the Flag Guide
 
 ### Basics
-* Click the opposite team's flag to take it. Click your team's flag before the enemy takes it in order to capture.
+* Click the opposite team's flag to take it. Then, click your team's flag before the enemy takes it in order to capture.
 * Each team has a team chest; put useful items in there and **never** take more than you need!
 
 ### Modes
@@ -16,15 +16,17 @@ local markdown_guide = [[
 ### Tips & Tricks
 * Sneak while jumping to jump up two blocks.
 * Start your messages with /t to send a message only visible to teamates.
-* Sprint by pressing the fast key (E by default).
-* Use /r to check your rank.
-* Use /m to add a team marker at pointed location.
-* Use /s to check the current and previous match summary.
-* Use /top50 to see the leaderboard.
-* Use /team to check all team members.
-* Use /donate <player> <score> to donate scores to a player.
-* Use /lb to see a list of bountied players.
-* Use /msg <player> to send a PM to a player.
+* Sprint by pressing the fast key (`E` by default).
+* Use `/r` to check your rank.
+* Use `/m` to add a team marker at pointed location.
+* Use `/s` to check the current and previous match summary.
+* Use `/top50` to see the leaderboard.
+* Use `/team` to check all team members.
+* Use `/donate <player> <score>` to donate scores to a player.
+* Use `/lb` to see a list of bountied players.
+* Use `/msg` <player> to send a PM to a player.
+
+****
 ]]
 
 local function ctf_guide(name, markdown_guide)
