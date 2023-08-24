@@ -53,7 +53,7 @@ minetest.register_on_newplayer(function(player)
         position = {x = 1, y = 0.15},
         offset = {x = -180, y = 20},
         text = "background.png",
-        scale = {x = 1.5, y = 1.5},
+        scale = {x = 1.5, y = 1.2},
         alignment = 0
     })
     local welcome_hud = player:hud_add({
