@@ -2,14 +2,16 @@ local markdown_guide = [[
 # Capture the Flag Guide
 
 ### Basics
-* Click the opposite team's flag to take it. Then, click your team's flag before the enemy takes it in order to capture.
+* Click the opposite team's flag to take it.
+Then, click your team's flag before the enemy takes it in order to capture.
 * Each team has a team chest; put useful items in there and **never** take more than you need!
 
 ### Modes
-* CTF cycles through three modes: Classes, Nade Fight, and Classic. 
+* CTF cycles through three modes: Classes, Nade Fight, and Classic.
 * At the end of each mode, you get to vote for how many matches of the next mode you would like to play.
 
-* In Classes, right-click your team's flag to change classes. It's helpful to read the description of the items your class is given.
+* In Classes, right-click your team's flag to change classes.
+It's helpful to read the description of the items your class is given.
 * In Nade Fight, right-click your grenade to switch between three types of nade.
 * In Classic, eat apples to heal and find ores to craft better swords.
 
@@ -29,8 +31,8 @@ local markdown_guide = [[
 ****
 ]]
 
-local function ctf_guide(name, markdown_guide)
-    local formspec_guide = md2f.md2f(0.3, 0, 8, 10, markdown_guide)
+local function ctf_guide(name, guide_content)
+    local formspec_guide = md2f.md2f(0.3, 0, 8, 10, guide_content)
     local formspec = "size[8,9.5]" ..
                     formspec_guide ..
                     "button_exit[3,8.75;2,1;exit;Close]"
